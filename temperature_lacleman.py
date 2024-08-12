@@ -33,7 +33,7 @@ def extract_data(url):
     response.raise_for_status()  # Verifica se a requisição foi bem-sucedida
     
     soup = BeautifulSoup(response.content, 'html.parser')
-    temperature = soup.find('b', id='t5').text
+    temperature = soup.find('b', id='t6').text
     data = soup.find('td', class_='td3').find('small').text.split(' ›')[0]
     
     return temperature, data
